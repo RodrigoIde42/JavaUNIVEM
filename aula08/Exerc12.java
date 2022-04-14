@@ -1,12 +1,19 @@
 package aula08;
 
+import java.util.Random;
+
 public class Exerc12 {
+
+    private int cont = 1;
     private int num;
     private float saldo;
 
-    public Exerc12(int num, float saldo) {
-        this.num = num;
+    Random random = new Random();
+
+    public Exerc12(float saldo) {
+        this.num = random.nextInt(100);
         this.saldo = saldo;
+        this.cont += 1;
     }
 
     public void setNum(int num){
@@ -23,6 +30,10 @@ public class Exerc12 {
 
     public float getSaldo() {
         return this.saldo;
+    }
+
+    public int getCont() {
+        return this.cont;
     }
 
     public void debito(float valor) {

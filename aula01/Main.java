@@ -96,19 +96,24 @@ public class Main {
                 car.buzinar();
                 break;
             case 17:
-                Exerc12 conta = new Exerc12(5, 1700.5f);
+                Exerc12 conta = new Exerc12(1700.2f);
+                Exerc12 conta2 = new Exerc12(1500.2f);
 
-                conta.setNum(18);
                 conta.setSaldo(1800.8f);
+                conta2.setSaldo(1500.2f);
 
                 System.out.println(conta.getNum());
                 System.out.println(conta.getSaldo());
+                System.out.println(conta2.getNum());
+                System.out.println(conta2.getSaldo());
+
+                System.out.println(conta.getCont());
 
                 conta.credito(150.3f);
-                System.out.println("Você inseriu: " + 150.3f + "Seus dados são:");
+                System.out.println("Você inseriu: " + 150.3f + "\nSeus dados são:");
                 conta.dados();
                 conta.debito(180.2f);
-                System.out.println("Você retirou: " + 180.2f + "Seus dados são:");
+                System.out.println("Você retirou: " + 180.2f + "\nSeus dados são:");
                 conta.dados();
                 break;
             default:
@@ -129,7 +134,13 @@ public class Main {
 
         String name = JOptionPane.showInputDialog("Qual seu nome?");
         JOptionPane.showMessageDialog(null, "Seu nome é: " + name + " e seu saldo é: " + c1.saldo);
-        JOptionPane.showConfirmDialog(null, "Seu nome realmente é: " + name + "?");
+        int opt = JOptionPane.showConfirmDialog(null, "Seu nome realmente é: " + name + "?");
+
+        if (opt == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "Ufa, belo nome!", "Belo nome!", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Teu nome n é esse", "Errou o próprio nome!!", JOptionPane.ERROR_MESSAGE);
+        }
 
     }
 }
