@@ -16,10 +16,6 @@ public class Exerc12 {
         this.cont += 1;
     }
 
-    public void setNum(int num){
-        this.num = num;
-    }
-
     public void setSaldo(float saldo) {
         this.saldo = saldo;
     }
