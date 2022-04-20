@@ -8,7 +8,7 @@ public class Aula07_03 {
 
     }
 
-    public int Aula07_03() {
+    public int aula07_03() {
 
         System.out.println("Um objeto foi criado?");
         return 1;

@@ -11,4 +11,8 @@ public class Aula07_02 {
         this.saldo = saldo;
     }
 
+    public double getSaldo() {
+        return saldo;
+    }
+
 }

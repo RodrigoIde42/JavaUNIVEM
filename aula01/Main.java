@@ -107,14 +107,15 @@ public class Main {
                 System.out.println(conta2.getNum());
                 System.out.println(conta2.getSaldo());
 
-                System.out.println(conta.getCont());
-
                 conta.credito(150.3f);
                 System.out.println("Você inseriu: " + 150.3f + "\nSeus dados são:");
                 conta.dados();
                 conta.debito(180.2f);
                 System.out.println("Você retirou: " + 180.2f + "\nSeus dados são:");
                 conta.dados();
+
+                System.out.println("Foram criadas " + conta.getCont() + " contas.");
+
                 break;
             default:
                 System.out.println("Unknown option!");

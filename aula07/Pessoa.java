@@ -26,4 +26,12 @@ public class Pessoa {
         return this.phone;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
 }

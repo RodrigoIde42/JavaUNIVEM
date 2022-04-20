@@ -1,11 +1,18 @@
 {
   "configurations": [
     {
-        "type": "java",
-        "name": "Launch Main",
-        "request": "launch",
-        "mainClass": "aula01.Main",
-        "shortenCommandLine": "argfile"
+      "type": "java",
+      "name": "Launch RA617474_av_02",
+      "request": "launch",
+      "mainClass": "aula08.RA617474_av_02",
+      "projectName": "HilarioAulas_c7819e49"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "aula01.Main",
+      "shortenCommandLine": "argfile"
     }
   ]   
 }
