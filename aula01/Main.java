@@ -5,6 +5,15 @@ import aula04.*;
 import aula06.Conta;
 import aula07.*;
 import aula08.*;
+import aula10.ControleRemoto;
+import aula10.av03JAVA.Agenda;
+import aula11.ControlePonto;
+import aula11.Gerente;
+import aula11.Secretario;
+import aula11.Telefonista;
+import aula12.CD;
+import aula12.DVD;
+import aula12.Midia;
 
 import java.util.Scanner;
 
@@ -18,7 +27,7 @@ public class Main {
         System.out.print("\033\143");
 
         System.out.println("Choose your destiny or 0 to quit: ");
-        System.out.println("1 - 17");
+        System.out.println("1 - 21");
         int op = scan.nextInt();
 
         switch (op) {
@@ -117,6 +126,113 @@ public class Main {
                 System.out.println("Foram criadas " + conta.getCont() + " contas.");
 
                 break;
+            case 18:
+                ControleRemoto cr = new ControleRemoto();
+                
+                cr.exibecanal();
+                cr.exibevolume();
+
+                for (int i = 0; i < 10; i++) {
+                    cr.addCanal();
+                    cr.addVolume();
+                }
+
+                cr.exibecanal();
+                cr.exibevolume();
+
+                cr.setCanal(10);
+                cr.setVolume(15);
+
+                for (int i = 0; i < 5; i++) {
+                    cr.subCanal();
+                    cr.subVolume();
+                }
+
+                break;
+            case 19:
+                ControlePonto cp = new ControlePonto();
+
+                Gerente g = new Gerente();
+
+                g.setMatricula(1);
+                g.setNome("Guilherme");
+
+                Secretario s = new Secretario();
+
+                s.setMatricula(2);
+                s.setNome("Cristiana");
+
+                Telefonista t = new Telefonista();
+
+                t.setMatricula(3);
+                t.setNome("Pedro");
+
+                cp.RegistraEntrada(g);
+                cp.RegistraEntrada(s);
+                cp.RegistraEntrada(t);
+                cp.RegistraSaida(g);
+                cp.RegistraSaida(s);
+                cp.RegistraSaida(t);
+
+                g.almocar("Macarrão");
+                Thread.sleep(5000);
+                break;
+            case 20:
+                
+                Midia m = new Midia();
+
+                DVD dvd = new DVD();
+
+                dvd.inserirDados();
+                dvd.getTipo();
+                dvd.getDetalhes();
+                dvd.printDados();
+
+                CD cd = new CD();
+
+                cd.inserirDados();
+                cd.getTipo();
+                cd.getDetalhes();
+                cd.printDados();
+
+                m.inserirDados();
+                m.getTipo();
+                m.getDetalhes();
+                m.printDados();
+
+                break;
+            case 21:
+                Agenda a = new Agenda();
+
+                a.armazenaPessoa("Rodrigo", 19, 1.70f);
+                a.armazenaPessoa("João", 20, 1.80f);
+                a.armazenaPessoa("Maria", 21, 1.90f);
+                a.armazenaPessoa("José", 22, 1.70f);
+                a.armazenaPessoa("Thaís", 40, 1.68f);
+                a.armazenaPessoa("Sonia", 32, 1.70f);
+                a.armazenaPessoa("Mariano", 33, 1.60f);
+                a.armazenaPessoa("Priscilla", 67, 1.70f);
+                a.armazenaPessoa("Alfredo", 9, 1.40f);
+                a.armazenaPessoa("Igor", 34, 1.70f);
+
+                a.imprimeAgenda();
+
+                System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+
+                a.buscaPessoa("Alfredo");
+
+                System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+
+                a.removePessoa("José");
+
+                System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+
+                a.imprimePessoa(4);
+
+                System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+
+                a.imprimeAgenda();
+                break;
             default:
                 System.out.println("Unknown option!");
                 break;
@@ -137,11 +253,12 @@ public class Main {
         JOptionPane.showMessageDialog(null, "Seu nome é: " + name + " e seu saldo é: " + c1.saldo);
         int opt = JOptionPane.showConfirmDialog(null, "Seu nome realmente é: " + name + "?");
 
-        if (opt == JOptionPane.YES_OPTION) {
+        if (opt == JOptionPane.YES_OPTION)
             JOptionPane.showMessageDialog(null, "Ufa, belo nome!", "Belo nome!", JOptionPane.INFORMATION_MESSAGE);
-        } else {
+        else if (opt == JOptionPane.NO_OPTION)
             JOptionPane.showMessageDialog(null, "Teu nome n é esse", "Errou o próprio nome!!", JOptionPane.ERROR_MESSAGE);
-        }
+        else
+            JOptionPane.showMessageDialog(null, "XXXX Vocx foi canceladx >:CC XXXX", "Canceladx XXX", JOptionPane.WARNING_MESSAGE);
 
     }
 }

@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch RA617474_av_03",
+      "request": "launch",
+      "mainClass": "aula10.RA617474_av_03",
+      "projectName": "HilarioAulas_c7819e49"
+    },
+    {
+      "type": "java",
       "name": "Launch RA617474_av_02",
       "request": "launch",
       "mainClass": "aula08.RA617474_av_02",
